@@ -80,7 +80,9 @@ En esta captura vemos como todo funciona, pues accediendo desde dos ventanas del
 #Resultados:
 
 Para ver los resultados ejecutamos el siguiente comando desde la máquina anfitriona cambiando la configuración de la máquina balanceadora.
+
 	ab -n 10000 -c 200 http://192.168.174.166/index.php
+
 Es decir, 10000 peticiones con una concurrencia de 200.
 
 ![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Ejecutando%20ab.png?raw=true "imagen")  
