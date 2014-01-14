@@ -16,25 +16,25 @@ Para comprobar las diferentes configuraciones de la máquina balanceadora usarem
 
 Pulsamos añadir:
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/1%20Pulsamos%20a%C3%B1adir.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/1%20Pulsamos%20a%C3%B1adir.png?raw=true "imagen")
 
 Continuar sin disco:
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/2%20Continuar%20sin%20el%20disco.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/2%20Continuar%20sin%20el%20disco.png?raw=true "imagen")
 
 Elegimos el disco: 
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/3%20Seleccionamos%20disco.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/3%20Seleccionamos%20disco.png?raw=true "imagen")
 
 En este caso para simplificar usaremos instalación sencilla que nos evita la configuración inicial:
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/4%20Instalacion%20sencilla.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/4%20Instalacion%20sencilla.png?raw=true "imagen")
 
 Personalizamos ajustes para poner la RAM y el numero de núcleos que queremos:
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/5%20Personalizar%20Ajustes.png?raw=true)  
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/6%20Procesador%20y%20memoria.png?raw=true)  
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/7%20Seleccionar%20configuracion.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/5%20Personalizar%20Ajustes.png?raw=true "imagen")  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/6%20Procesador%20y%20memoria.png?raw=true "imagen")  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/7%20Seleccionar%20configuracion.png?raw=true "imagen")
 
 
 ¡Ya podemos iniciar!
@@ -46,36 +46,36 @@ Procedemos a la instalación de NGINX:
 
 	sudo apt-get install nginx
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%201%20Install%20NGINX.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%201%20Install%20NGINX.png?raw=true "imagen")
 
 Configuramos NGINX. Para esto vamos al directorio dónde esta la configuración (Realizamos una copia de la configuración por defecto, para poder volver a esta en caso de error). Y finalmente ponemos en el archivo default lo siguiente (información sobre el backend, es decir, las máquinas servidoras):
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%202%20configurar%20nginx.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%202%20configurar%20nginx.png?raw=true "imagen")
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%203%20configurar%20nginx.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%203%20configurar%20nginx.png?raw=true "imagen")
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%204%20configurar%20nginx.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Balanceador%204%20configurar%20nginx.png?raw=true "imagen")
 
 ##Configuración servidoras:
 
 Estos pasos se realizan en las 2 máquinas servidoras.
 Instalamos git (Para poder descargar las aplicaciones):
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%201%20Install%20git.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%201%20Install%20git.png?raw=true "imagen")
 
 Instalamos apache y php:
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%202%20install%20apache%20y%20php%20.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%202%20install%20apache%20y%20php%20.png?raw=true "imagen")
 
 Realizamos el clone del repositorio git y copiamos a /var/www :
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%203%20git%20clone%20y%20cp.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Servidoras%203%20git%20clone%20y%20cp.png?raw=true "imagen")
 
 #Todo funcionando:
 
 En esta captura vemos como todo funciona, pues accediendo desde dos ventanas del navegador a la misma IP obtenemos dos página diferentes. En el caso de la máquina servidora 1, tenemos la practica 1 de esta asignatura. Y en la servidora 2 la segunda practica.
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Prueba%20-%20Funciona%20balanceador.png?raw=true)
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Prueba%20-%20Funciona%20balanceador.png?raw=true "imagen")
 
 #Resultados:
 
@@ -83,7 +83,7 @@ Para ver los resultados ejecutamos el siguiente comando desde la máquina anfitr
 	ab -n 10000 -c 200 http://192.168.174.166/index.php
 Es decir, 10000 peticiones con una concurrencia de 200.
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Ejecutando%20ab.png?raw=true)  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Ejecutando%20ab.png?raw=true "imagen")  
 
 Las configuraciones serán:
 ·1 core 256 RAM  
@@ -97,13 +97,13 @@ Los resultados son los siguientes:
 
 Tiempo de respuesta
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Tabla%20tRespuesta.png?raw=true)  
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Grafico%20tRespuesta.png?raw=true)  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Tabla%20tRespuesta.png?raw=true "imagen")  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Grafico%20tRespuesta.png?raw=true "imagen")  
 
 Tiempo total
 
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Tabla%20tTotal.png?raw=true)  
-![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Grafico%20tTotal.png?raw=true)  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Tabla%20tTotal.png?raw=true "imagen")  
+![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Grafico%20tTotal.png?raw=true "imagen")  
 
 ##Conclusiones:
 
@@ -119,7 +119,7 @@ Esto no era muy útil, pues los recursos estaban compartidos entre máquinas ser
 Pero igualmente sirve para ver en funcionamiento la estructura que he montado con máquinas virtuales locales. (Funciona igual, aunque no tenga la misma estructura y use contenedores).
 
 La dirección dónde esta alojada es la siguiente:
-[practica3ivjcl.cloudapp.net](practica3ivjcl.cloudapp.net)
+[practica3ivjcl.cloudapp.net](http://practica3ivjcl.cloudapp.net)
 
 
 Hay que tener en cuenta que al realizar la petición a la misma IP (La del balanceador), el explorador se hace un lío, y mezcla al recargar los css de las dos páginas. Lo mismo sucede al enviar los formularios.
@@ -127,6 +127,6 @@ Esto tiene una explicación lógica, y es que las peticiones y envío de formula
 
 Esto en un caso real no sucedería (Incluso con la misma configuración), ya que el objetivo del balanceo de carga es distribuir la carga entre servidores que sirven la misma web. 
 
-Además en esta práctica el objetivo es ver como va de un aplicación a otra, y no que el funcionamiento de estas sea óptimo. Para ver el funcionamiento óptimo podemos acceder a ellas en heroku:
-[Práctica 1: Resolución ecuaciones 2º grado](http://segundogradopractica1ivjcl.herokuapp.com/)
+Además en esta práctica el objetivo es ver como va de un aplicación a otra, y no que el funcionamiento de estas sea óptimo. Para ver el funcionamiento óptimo podemos acceder a ellas en heroku:  
+[Práctica 1: Resolución ecuaciones 2º grado](http://segundogradopractica1ivjcl.herokuapp.com/)  
 [Práctica 2: Calcula resistencia equivalente](http://resitenciasp2ivjcl.herokuapp.com/)
