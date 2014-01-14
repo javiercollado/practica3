@@ -96,6 +96,7 @@ Las configuraciones serán:
 Los resultados son los siguientes:  
 
 Tiempo de respuesta
+
 ![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Tabla%20tRespuesta.png?raw=true)  
 ![](https://github.com/javiercollado/practica3/blob/master/Imagenes/Grafico%20tRespuesta.png?raw=true)  
 
